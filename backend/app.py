@@ -12,7 +12,7 @@ DATABASE_URL = os.getenv(
     'DATABASE_URL',
     'postgresql://postgres:postgres@postgis:5432/gisdb'
 )
-
+ 
 engine = create_engine(DATABASE_URL)
 Session = sessionmaker(bind=engine)
 
@@ -264,4 +264,3 @@ def health():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5001, debug=True)
-
